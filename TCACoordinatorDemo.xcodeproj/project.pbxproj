@@ -13,6 +13,12 @@
 		31019B8824D4C14200C95CDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31019B8724D4C14200C95CDB /* Assets.xcassets */; };
 		31019B8E24D4C14200C95CDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31019B8C24D4C14200C95CDB /* LaunchScreen.storyboard */; };
 		31019B9724D4C2A000C95CDB /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 31019B9624D4C2A000C95CDB /* ComposableArchitecture */; };
+		31B20F0424D4CEA400B9002D /* ProvidePhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B20EFF24D4CEA400B9002D /* ProvidePhone.swift */; };
+		31B20F0524D4CEA400B9002D /* SelectCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B20F0024D4CEA400B9002D /* SelectCity.swift */; };
+		31B20F0624D4CEA400B9002D /* SetPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B20F0124D4CEA400B9002D /* SetPin.swift */; };
+		31B20F0724D4CEA400B9002D /* ConfirmPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B20F0224D4CEA400B9002D /* ConfirmPin.swift */; };
+		31B20F0824D4CEA400B9002D /* TickestMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B20F0324D4CEA400B9002D /* TickestMain.swift */; };
+		31F8AC1F24D622CE00C1094F /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F8AC1E24D622CE00C1094F /* Navigation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +29,12 @@
 		31019B8724D4C14200C95CDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31019B8D24D4C14200C95CDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31019B8F24D4C14200C95CDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31B20EFF24D4CEA400B9002D /* ProvidePhone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProvidePhone.swift; sourceTree = "<group>"; };
+		31B20F0024D4CEA400B9002D /* SelectCity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCity.swift; sourceTree = "<group>"; };
+		31B20F0124D4CEA400B9002D /* SetPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetPin.swift; sourceTree = "<group>"; };
+		31B20F0224D4CEA400B9002D /* ConfirmPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmPin.swift; sourceTree = "<group>"; };
+		31B20F0324D4CEA400B9002D /* TickestMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TickestMain.swift; sourceTree = "<group>"; };
+		31F8AC1E24D622CE00C1094F /* Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,11 +73,25 @@
 				31019B8124D4C14100C95CDB /* AppDelegate.swift */,
 				31019B8524D4C14100C95CDB /* AppView.swift */,
 				31019B8724D4C14200C95CDB /* Assets.xcassets */,
+				31B20EEE24D4C43800B9002D /* Components */,
 				31019B8F24D4C14200C95CDB /* Info.plist */,
 				31019B8C24D4C14200C95CDB /* LaunchScreen.storyboard */,
 				31019B8324D4C14100C95CDB /* SceneDelegate.swift */,
 			);
 			path = TCACoordinatorDemo;
+			sourceTree = "<group>";
+		};
+		31B20EEE24D4C43800B9002D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				31F8AC1E24D622CE00C1094F /* Navigation.swift */,
+				31B20EFF24D4CEA400B9002D /* ProvidePhone.swift */,
+				31B20F0124D4CEA400B9002D /* SetPin.swift */,
+				31B20F0224D4CEA400B9002D /* ConfirmPin.swift */,
+				31B20F0024D4CEA400B9002D /* SelectCity.swift */,
+				31B20F0324D4CEA400B9002D /* TickestMain.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,9 +170,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31B20F0824D4CEA400B9002D /* TickestMain.swift in Sources */,
 				31019B8224D4C14100C95CDB /* AppDelegate.swift in Sources */,
 				31019B8424D4C14100C95CDB /* SceneDelegate.swift in Sources */,
+				31B20F0724D4CEA400B9002D /* ConfirmPin.swift in Sources */,
+				31B20F0424D4CEA400B9002D /* ProvidePhone.swift in Sources */,
+				31B20F0524D4CEA400B9002D /* SelectCity.swift in Sources */,
+				31F8AC1F24D622CE00C1094F /* Navigation.swift in Sources */,
 				31019B8624D4C14100C95CDB /* AppView.swift in Sources */,
+				31B20F0624D4CEA400B9002D /* SetPin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
