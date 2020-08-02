@@ -8,6 +8,7 @@ struct NavigationState {
 
 protocol NavigationItem {
   var navigationID: UUID { get }
+  var navigationTitle: String { get }
 }
 
 enum NavigationAction {
@@ -50,7 +51,12 @@ typealias NavigationDispatcher = (NavigationAction) -> Void
 typealias NavigationItemViewFactory = (NavigationItem, @escaping NavigationDispatcher) -> AnyView
 
 final class NavigationItemViewController: UIHostingController<AnyView> {
-  var item: NavigationItem { didSet { rootView = viewFactory(item, navigationDispatcher) } }
+  var item: NavigationItem {
+    didSet {
+      rootView = viewFactory(item, navigationDispatcher)
+      title = item.navigationTitle
+    }
+  }
   let viewFactory: NavigationItemViewFactory
   let navigationDispatcher: NavigationDispatcher
 
@@ -63,6 +69,7 @@ final class NavigationItemViewController: UIHostingController<AnyView> {
     self.viewFactory = viewFactory
     self.navigationDispatcher = navigationDispatcher
     super.init(rootView: viewFactory(item, navigationDispatcher))
+    title = item.navigationTitle
   }
 
   required init?(coder aDecoder: NSCoder) {
@@ -89,7 +96,8 @@ struct NavigationControllerView: UIViewControllerRepresentable {
     self.store = store
     self.viewFactory = viewFactory
     self.viewStore = NavigationViewStore(store, removeDuplicates: {
-      $0.items.map(\.navigationID) == $1.items.map(\.navigationID)
+      $0.items.map(\.navigationID) == $1.items.map(\.navigationID) &&
+        $0.items.map(\.navigationTitle) == $1.items.map(\.navigationTitle)
     })
   }
 

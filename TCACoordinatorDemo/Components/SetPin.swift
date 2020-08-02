@@ -3,6 +3,7 @@ import SwiftUI
 
 struct SetPinState: Equatable, NavigationItem {
   let navigationID = UUID()
+  let navigationTitle = "SetPin"
   var pin: String = ""
 }
 
@@ -58,7 +59,7 @@ struct SetPinView: View {
             Spacer()
           }
         }
-      }.navigationBarTitle("SetPin", displayMode: .inline)
+      }
     }
   }
 }

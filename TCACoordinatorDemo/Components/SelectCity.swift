@@ -3,6 +3,7 @@ import SwiftUI
 
 struct SelectCityState: Equatable, NavigationItem {
   let navigationID = UUID()
+  let navigationTitle = "SelectCity"
   var city: String = ""
 }
 
@@ -58,7 +59,7 @@ struct SelectCityView: View {
             Spacer()
           }
         }
-      }.navigationBarTitle("SelectCity", displayMode: .inline)
+      }
     }
   }
 }

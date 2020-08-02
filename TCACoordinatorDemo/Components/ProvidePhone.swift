@@ -3,6 +3,7 @@ import SwiftUI
 
 struct ProvidePhoneState: Equatable, NavigationItem {
   let navigationID = UUID()
+  let navigationTitle = "ProvidePhoneNumber"
   var phone: String = ""
 }
 
@@ -58,7 +59,7 @@ struct ProvidePhoneView: View {
             Spacer()
           }
         }
-      }.navigationBarTitle("ProvidePhoneNumber", displayMode: .inline)
+      }
     }
   }
 }

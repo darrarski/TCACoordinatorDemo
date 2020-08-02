@@ -3,6 +3,7 @@ import SwiftUI
 
 struct ConfirmPinState: Equatable, NavigationItem {
   let navigationID = UUID()
+  let navigationTitle = "ConfirmPin"
   var pinConfirmation: String = ""
 }
 
@@ -58,7 +59,7 @@ struct ConfirmPinView: View {
             Spacer()
           }
         }
-      }.navigationBarTitle("ConfirmPin", displayMode: .inline)
+      }
     }
   }
 }

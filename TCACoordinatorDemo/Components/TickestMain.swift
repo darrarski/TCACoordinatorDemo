@@ -3,6 +3,7 @@ import SwiftUI
 
 struct TicketsMainState: Equatable, NavigationItem {
   let navigationID = UUID()
+  let navigationTitle = "TicketsMain"
 }
 
 enum TicketsMainAction: Equatable {
@@ -37,7 +38,7 @@ struct TicketsMainView: View {
     WithViewStore(store.scope(state: TicketsMainViewState.init(state:))) { viewStore in
       Form {
         EmptyView()
-      }.navigationBarTitle("TicketsMainView", displayMode: .inline)
+      }
     }
   }
 }
